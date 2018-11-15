@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchEvents } from '../state-management/action-creators';
-import MyCalendar, { BigCalendarViews } from '../shared-components/BigCalendar';
+import MyCalendar from '../shared-components/BigCalendar';
 
 
 class BookingPage extends Component {

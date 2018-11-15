@@ -2,7 +2,7 @@ import { ADD_EVENTS, DEFAULT_ACTION, SET_USER } from "./action-types";
 
 export const initialState = {
     events: {}, // storing array as key-value store
-    user: { isAdmin: false } // anyone who is not admin is a customer.
+    user: { isAdmin: true } // anyone who is not admin is a customer.
 };
 
 /**
