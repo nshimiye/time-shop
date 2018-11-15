@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchEvents } from '../state-management/action-creators';
-import MyCalendar from '../shared-components/BigCalendar';
+import MyCalendar, { BigCalendarViews } from '../shared-components/BigCalendar';
+
 
 class BookingPage extends Component {
   componentDidMount() {
@@ -10,10 +11,10 @@ class BookingPage extends Component {
   }
 
   render() {
-    console.log('[ BookingPage ]', this.props);
+    const { events } = this.props;
     return (
       <div className="booking-page">
-        <MyCalendar events={this.props.events}/>
+        <MyCalendar events={events} />
       </div>
     );
   }

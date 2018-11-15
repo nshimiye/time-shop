@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import BigCalendar from 'react-big-calendar';
-import moment from 'moment';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
-import MyCalendar from '../shared-components/BigCalendar';
 
+import MyCalendar, { BigCalendarViews } from '../shared-components/BigCalendar';
 
-const localizer = BigCalendar.momentLocalizer(moment) 
-
-// const LazyGame = lazy(() => import('./Game'));
 
 const myEventsList = [
   {
@@ -36,7 +30,7 @@ class DashboardPage extends Component {
   render() {
     return (
       <div className="dashboard-page">
-        <MyCalendar events={myEventsList} />
+        <MyCalendar events={myEventsList} defaultView={BigCalendarViews.AGENDA} />
       </div>
     );
   }
