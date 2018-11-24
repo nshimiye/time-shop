@@ -1,4 +1,5 @@
 import { ADD_EVENTS } from "./action-types";
+import CTFService from '../services/customer-times-fetcher'
 
 export const eventsStatic = [
     // {
@@ -18,21 +19,8 @@ export const addEvents = (events) => ({
 // Async actions
 export const fetchEvents = () => {
     return dispatch => {
-        // @TODO call backend api
-        const eventSource = new EventSource('http://localhost:8000/events');
-        eventSource.addEventListener('error', event => {
-            console.log('[event source error]', event);
-        });
-        eventSource.addEventListener('message', event => {
-            const data = JSON.parse(event.data);
-            console.log('[system updates]', data);
-            if (data.id) {
-                dispatch(addEvents([data]));
-            }
-        });
-        eventSource.addEventListener('open', event => {
-            console.log('[event source starts]', event);
-        });
-        dispatch(addEvents(eventsStatic));
-    }
+        CTFService.listen(events => 
+            dispatch(addEvents(events))
+        );
+    };
 }

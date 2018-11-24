@@ -4,15 +4,18 @@ import { connect } from 'react-redux';
 import './App.css';
 import DashboardPage from './pages/Dashboard';
 import BookingPage from './pages/Booking';
+import HomePage from './pages/Home';
 
 class App extends Component {
   render() {
     const { user } = this.props;
 
+    if (!user) {
+      return <HomePage />
+    }
+
     return (
-      <div className="App">
-        {user.isAdmin ? <DashboardPage /> : <BookingPage />}
-      </div>
+      user.isAdmin ? <DashboardPage /> : <BookingPage />
     );
   }
 }

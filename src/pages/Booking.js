@@ -13,7 +13,7 @@ class BookingPage extends Component {
   render() {
     const { events } = this.props;
     return (
-      <div className="booking-page">
+      <div className="booking-page" style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <MyCalendar events={events} />
       </div>
     );

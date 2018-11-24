@@ -12,7 +12,7 @@ class DashboardPage extends Component {
   render() {
     const { events } = this.props;
     return (
-      <div className="booking-page">
+      <div className="dashboard-page" style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <MyCalendar events={events} defaultView={BigCalendarViews.AGENDA} />
       </div>
     );
