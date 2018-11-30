@@ -41,7 +41,7 @@ code {
 	color: #fff;
 }
 .button--pipaluk.button--inverted {
-	color: #7986cb;
+	color: #8c00ff;
 }
 .button--pipaluk::before,
 .button--pipaluk::after {
@@ -59,13 +59,13 @@ code {
 	transition-timing-function: cubic-bezier(0.25, 0, 0.3, 1);
 }
 .button--pipaluk::before {
-	border: 2px solid #7986cb;
+	border: 2px solid #8c00ff;
 }
 .button--pipaluk.button--inverted::before {
 	border-color: #fff;
 }
 .button--pipaluk::after {
-	background: #7986cb;
+	background: #8c00ff;
 }
 .button--pipaluk.button--inverted::after {
 	background: #fff;
@@ -80,7 +80,7 @@ code {
 	transform: scale3d(0.7, 0.7, 1);
 }
 .button--pipaluk:hover::after {
-	background-color: #3f51b5;
+	background-color: #8c00ff;
 }
 .button--pipaluk.button--inverted:hover::after {
 	background-color: #fff;

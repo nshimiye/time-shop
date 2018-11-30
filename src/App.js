@@ -9,14 +9,15 @@ import HomePage from './pages/Home';
 class App extends Component {
   render() {
     const { user } = this.props;
+    return <BookingPage />;
 
-    if (!user) {
-      return <HomePage />
-    }
+    // if (!user) {
+    //   return <HomePage />
+    // }
 
-    return (
-      user.isAdmin ? <DashboardPage /> : <BookingPage />
-    );
+    // return (
+    //   user.isAdmin ? <DashboardPage /> : <BookingPage />
+    // );
   }
 }
 
